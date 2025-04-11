@@ -30,6 +30,7 @@ physics_world.register_body('player', (config) => {
   body.collisionFilterGroup = physics_world.groups['players'];
   body.collisionFilterMask = physics_world.groups['blocks'];
   body.linearDamping = 0.1;
+  body.angularDamping = 1;
   return body;
 });
 physics_world.register_body('dynamic-box-1', (config) => {
