@@ -103,6 +103,9 @@ const animate = () => {
     player.jump();
   }
 
+  // NEW: Update the player each frame so we can switch damping for air / ground
+  player.update();
+
   // Update physics world
   playerMesh.position.copy(player.body.position);
   playerMesh.quaternion.copy(player.body.quaternion);
